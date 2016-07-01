@@ -30,7 +30,7 @@ namespace EmptyWebApplication
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Hello Asp.net Core. I'm from linux!");
             });
         }
     }
