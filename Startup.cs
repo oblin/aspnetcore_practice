@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -26,11 +27,12 @@ namespace EmptyWebApplication
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
             }
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello Asp.net Core. I'm from linux!");
+                await context.Response.WriteAsync("Hello Asp.net Core!");
             });
         }
     }

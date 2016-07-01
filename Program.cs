@@ -18,6 +18,7 @@ namespace EmptyWebApplication
                 .Build();
             
             var host = new WebHostBuilder()
+                .UseUrls("http://localhost:5001/")
                 .UseConfiguration(config)
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
